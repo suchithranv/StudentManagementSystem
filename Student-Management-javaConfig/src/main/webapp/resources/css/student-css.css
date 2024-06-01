@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+.styled-table {
+    border-collapse: collapse;     /*to ensure there is no space between the cell borders*/  
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);              /*to add a subtle transparent shadow around the table*/
+}
+
+.styled-table thead tr {        /* Styling the header*/
+    background-color: #2B3467;
+    color: #ffffff;
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {                                    /*Add a bottom border to each row for separation*/
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {         /*Add a lighter background to every second row to help readability*/
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {            /*Add a dark border to the very last row to signify the end of the table*/
+    border-bottom: 2px solid #2B3467;
+}
+
+
+.a:link, .a:visited {
+  background-color: #FF8787;
+  text-decoration: none;
+  text-align : center;
+  color : white;
+  display: inline-block;
+  margin-top : 25px;
+  padding : 15px;
+   width: 150px; 
+}
+
+.a:hover, .a:active {
+  background-color : #F96666;
+}
+
+
+button {
+  background-color: #4FA095;
+  text-decoration: none;
+  text-align : center;
+  color : white;
+  display: inline-block;
+  padding: 6px;
+  width: 100px;
+  border-style :none
+}
+
+button:hover {
+  background-color : #03C988 ;
+}
+
+i {
+  transition: all 0.2s ease-in-out;
+}
+
+i:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 40px;
+  right: 15px;
+  border: 3px solid #EBC7E6;
+  z-index: 9;
+  background-color: #EBC7E6;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #EBC7E6;
+}
+
+/* Full-width input fields */
+.form-container input[type=text] {
+  width: 270px;
+  padding: 15px;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus {
+  background-color: #ffffff;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #A084DC;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover{
+  opacity: 1;
+}
+

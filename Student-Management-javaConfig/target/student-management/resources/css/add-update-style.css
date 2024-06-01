@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+
+.form {
+border : 1px solid #000;
+background-color:white;
+border-style: hidden;
+opacity: 0.8;
+width:400px;
+padding-right:10px;
+padding-left:10px;
+padding-top:5px;
+padding-bottom:20px;
+margin-left:90px;
+}
+
+.form1 {
+border : 1px solid #000;
+background-color:white;
+border-style: hidden;
+opacity: 0.8;
+width:400px;
+padding-right:10px;
+padding-left:10px;
+padding-top:20px;
+padding-bottom:20px;
+margin-right:90px;
+margin-top:55px;
+}
+
+input[type=text], input[type=password], select {
+  width: 70%;
+  padding: 6px 18px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label {
+	padding-right : 10px;
+	padding-left : 20px;
+}
+
+input[type=submit] {
+  width: 422px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+a:link, a:visited {
+  background-color: #FF8787;
+  text-decoration: none;
+  text-align : center;
+  color : white;
+  display: inline-block;
+  margin-top : 25px;
+  padding : 15px;
+  width : 150px; 
+}
+
+a:hover, a:active {
+  background-color : #F96666;
+}

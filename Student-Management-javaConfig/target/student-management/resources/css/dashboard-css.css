@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+
+
+a:link, a:visited {
+  background-color: #FF8787;
+  text-decoration: none;
+  text-align : center;
+  color : white;
+  display: inline-block;
+  margin-top : 25px;
+  padding : 15px;
+  width: 150px; 
+}
+
+a:hover, a:active {
+  background-color : #F96666;
+}

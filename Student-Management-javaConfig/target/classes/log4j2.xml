@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<RollingFile name="file"
+			fileName="C:/Users/Admin/eclipse-workspace/Student-Management-javaConfig/src/logs/logfile.log"
+			filePattern="C:/Users/Admin/eclipse-workspace/Student-Management-javaConfig/src/logs/logfile-%d{HH-mm-ss-SSS}.log">
+			<PatternLayout>
+				<pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
+			</PatternLayout>
+			<SizeBasedTriggeringPolicy size="1 mb" />
+		</RollingFile>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Root level="error"> 
+		     <AppenderRef ref="file" /> 
+		     <AppenderRef ref="console" />
+		 </Root>
+		<Logger name="com.sm.controllers" level="trace" additivity="false">
+			<AppenderRef ref="file" />
+			<AppenderRef ref="console" />
+		</Logger>
+		<Logger name="com.sm.helper" level="trace" additivity="false">
+			<AppenderRef ref="file" />
+			<AppenderRef ref="console" />
+		</Logger>
+		<Logger name="com.sm.config" level="trace" additivity="false">
+			<AppenderRef ref="file" />
+			<AppenderRef ref="console" />
+		</Logger>
+	</Loggers>
+</Configuration>

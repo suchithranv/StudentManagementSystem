@@ -1,0 +1,732 @@
+spring web application maven build in tool  -----> java based configuration with no web.xml and spring config file
+
+File-->new-->maven project ---> archetypes : maven-archetype-webapp ---->group id,  artifact id , name, package ---> finish
+
+Maven dependencies required :
+1. spring web mvc
+2. spring jdbc
+3. mysql connector
+4. jstl
+5. servlet api
+
+change java:18, deployment descriptor : 5.0
+
+add resource and java folder to place java files : project --> showin--> system explorer-->src-->main-->resources and java folder
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Create a class AppInitializer -----> to replace web.xml
+   it should implement WebApplicationInitializer interface
+   WebApplicationInitializer as only one method called onStartup
+   project-->run--->maven install : to compile
+
+web.xml --> we are replacing this file with AppInitilizer class
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="5.0">
+
+	<display-name>Student-Management</display-name>
+
+	<servlet>
+		<servlet-name>StudentFrontController</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/application-config.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+         <!-- whenever the server get started this class will get initialized by 
+			 looking at StudentFrontController-servlet.xml in Web INF folder  -->
+             <!-- Or else it will get initialized when the first request is made to that 
+			servlet without using this tag  -->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentFrontController</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+</web-app>
+
+
+
+2. The bean configuration file should be placed in resources folder. ---> application-config.xml
+
+3. Setting up dispacter servlet in LoveCalulatorInitializer class
+
+   public class LoveCalculatorInitializer implements WebApplicationInitializer {
+
+	@Override
+	public void onStartup(ServletContext servletContext) throws ServletException {
+		
+		
+		//creating container object
+		XmlWebApplicationContext webApplicationContext = new XmlWebApplicationContext();
+		//application-config.xml file is in classpath so mention it
+		webApplicationContext.setConfigLocation("classpath:application-config.xml");
+		
+		
+		//create dispatcher servlet
+		//goal is to pass web application context object in dispatcher servlet so create container object.
+		DispatcherServlet dispatcherServlet = new DispatcherServlet(webApplicationContext);
+		
+		
+		//adding servlet to servletContext
+		//register the dispatcher servlet with servlet context object
+		servletContext.addServlet("myDispatcherServlet", dispatcherServlet);
+	}
+}
+
+
+4. For the Dispatcher Servlet : Set up URL Mapping , Set up load-on-startup
+   CONFIGURE LOAD-ON-STARTUP AND URL MAPPING FOR THE DISPATCHER SERVLET
+   What is the return type for servletContext.addServlet(_,__);
+   
+
+5. Creating TestController
+
+6. deploy our code and test it 
+
+7. Create a class called LoveCalculatorAppConfig to replace application-config.xml
+   
+application-config.xml file
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springFramework.org/schema/context/spring-context.xsd">
+       
+         <context:component-scan base-package="com.lc.controllers"/>
+         
+         <bean id = "viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+         <property name = "prefix" value = "/WEB-INF/view/" />
+         <property name = "suffix" value = ".jsp" />
+         </bean>
+   </beans>
+
+
+
+8. Register AppConfig class with DS
+
+
+9. Create a view (JSP pages)
+   create view folder in WEB-INF folder and add all jsp files there
+   
+   
+10. Develop a View Resolver
+ 
+--------------------------------------------------------------------------------------------------------------------------
+
+Easy way to configure the DS. Spring will do it instead of below what we did
+
+LoveCalculatorAppInitializer.class
+
+public class LoveCalculatorInitializer implements WebApplicationInitializer {
+	@Override
+	public void onStartup(ServletContext servletContext) throws ServletException {
+	
+		XmlWebApplicationContext webApplicationContext = new XmlWebApplicationContext();
+        webApplicationContext.setConfigLocation("classpath:application-config.xml");
+        
+		AnnotationConfigWebApplicationContext webApplicationContext = new AnnotationConfigWebApplicationContext();
+		webApplicationContext.register(LoveCalculatorAppConfig.class);	
+	
+		DispatcherServlet dispatcherServlet = new DispatcherServlet(webApplicationContext);
+
+		ServletRegistration.Dynamic myCustomDispatcher = servletContext.addServlet("myDispatcherServlet",dispatcherServlet);
+
+		myCustomDispatcher.setLoadOnStartup(1);
+		myCustomDispatcher.addMapping("/mywebsite.com/*");
+	}
+}
+
+
+1. create a class called LCAppInitializer
+   it extends to AbstractAnnotationConfigDispatcherServletInitializer
+
+2. delete web.xml file
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+for all the @Entity classes it will create a table in the specified db.
+<!-- to create/update table -->
+<property name="hbm2ddl.auto">create</property>
+<property name="hbm2ddl.auto">update</property>
+
+//to create table with specific name 
+@Entity(name="student_table")
+@Table(name="student_table")
+
+//to specify the column names
+@Column(name="songId")
+
+//to specify the Primary key
+@Id
+
+//to make a column temporary, not stored in db
+@Transient
+
+//to add the column/object in exsisting table 
+@Embeddable
+   
+   
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+      
+    <!-- url -->
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/studentmanagement</property>  
+    
+	<!-- username -->
+	<property name="hibernate.connection.username">root</property>
+
+	<!-- password -->
+    <property name="hibernate.connection.password">root</property>
+       
+	<!-- mysql driver -->
+	<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+	
+	<!-- to enable the sql query -->
+	<property name="hibernate.show_sql">true</property>
+	
+<!-- 	 to create/update table -->
+<!-- 	<property name="hbm2ddl.auto">create</property> -->
+	
+	</session-factory>
+</hibernate-configuration>
+
+
+
+	@Bean
+	public InternalResourceViewResolver viewResolver() {
+
+		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+		viewResolver.setPrefix("/WEB-INF/view/");
+		viewResolver.setSuffix(".jsp");
+		return viewResolver;
+	}
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+
+		registry.addResourceHandler("/URLToReachResourceFolder/**").addResourceLocations("/resources/");
+	
+		registry.addResourceHandler("/URLToReachImageFolder/**").addResourceLocations("/resources/images/");
+		
+		registry.addResourceHandler("/URLToReachJsFolder/**").addResourceLocations("/resources/js/");
+
+	}
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+1. To add image to mysql
+
+There are two ways to save images. 
+Most common way is to save the file name in MySQL table and upload image in folder ----> used
+Another way is to store the image into directly into the Database -----> not used
+
+MySQL database provides specialized datatype to save a large amount of data and that data type is BLOB.
+
+BLOB data type is a binary large object that can hold a variable length of data.
+A BLOB is typically used to store binary data and has four types:’
+
+1. TINYBLOB
+2. BLOB
+3. MEDIUMBLOB
+4. LONGBLOB
+
+The main difference between all types is the length of the respective data can be saved.
+
+BLOB columns are case-sensitive
+
+CREATE TABLE files (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    file_data MEDIUMBLOB NOT NULL
+);
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+2. apache log4j
+
+apache log4j is an  api used to implement logging in your framework
+
+System.out.println() will dissappear so we use this
+
+we need to log the statements/ verification details into the log file/console
+
+Add this dependency
+<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
+
+We can configure log4j in 4 ways : xml, json, yaml, properties format.
+xml and properties format are popular
+
+
+Log Levels : ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF  
+it will display that level and above it
+
+------Set log level in log4j.properties-----
+
+log4j.rootLogger=DEBUG, consoleAppender  
+log4j.appender.consoleAppender=org.apache.log4j.ConsoleAppender  
+log4j.appender.consoleAppender.layout=org.apache.log4j.PatternLayout  
+log4j.appender.consoleAppender.layout.ConversionPattern=[%t] %-5p %c %x - %m%n  
+   
+#Log info messages for package 'com.javatpoint.web.controller'  
+log4j.logger.com.javatpoint.web.controller=INFO, consoleAppender  
+
+
+
+------------
+
+# LOG4J configuration
+log4j.rootLogger=INFO, Appender1, Appender2
+ 
+log4j.appender.Appender1=org.apache.log4j.ConsoleAppender
+log4j.appender.Appender1.layout=org.apache.log4j.PatternLayout
+log4j.appender.Appender1.layout.ConversionPattern=%-7p %d [%t] %c %x - %m%n
+ 
+log4j.appender.Appender2=org.apache.log4j.FileAppender
+log4j.appender.Appender2.File=D:/Logs/SpringMVC.log
+log4j.appender.Appender2.layout=org.apache.log4j.PatternLayout
+log4j.appender.Appender2.layout.ConversionPattern=%-7p %d [%t] %c %x - %m%n
+
+
+
+---------Set log level in log4j.xml-----------
+
+<log4j:configuration debug="true" xmlns:log4j='http://jakarta.apache.org/log4j/'>  
+    
+  <appender name="console" class="org.apache.log4j.ConsoleAppender">  
+    <param name="Target" value="System.out"/>  
+    <layout class="org.apache.log4j.PatternLayout">  
+    <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />  
+    </layout>  
+  </appender>  
+   
+  <logger name="com.javatpoint.web.controller">  
+    <level value="INFO" />  
+    <appender-ref ref="console" />  
+  </logger>  
+    
+  <root>  
+    <level value="DEBUG" />  
+    <appender-ref ref="console"></appender>  
+  </root>  
+    
+</log4j:configuration>  
+
+
+
+--------
+that specifies log level as INFO and configures two appenders: 
+one for console logging and one for file logging (Path of the log file is D:/Logs/SpringMVC.log, so make sure the directory exists).
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//log4j/log4j Configuration//EN" "log4j.dtd">
+ 
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+ 
+    <appender name="Appender1" class="org.apache.log4j.ConsoleAppender">
+       <layout class="org.apache.log4j.PatternLayout">
+          <param name="ConversionPattern" value="%-7p %d [%t] %c %x - %m%n"/>
+       </layout>
+    </appender>
+  
+    <appender name="Appender2" class="org.apache.log4j.FileAppender">
+       <param name="File" value="D:/Logs/SpringMVC2.log" />
+       <layout class="org.apache.log4j.PatternLayout">
+          <param name="ConversionPattern" value="%-7p %d [%t] %c %x - %m%n"/>
+       </layout>
+    </appender>
+ 
+    <root>
+        <priority value="INFO"/>
+        <appender-ref ref="Appender1" />
+        <appender-ref ref="Appender2" />
+    </root>
+     
+</log4j:configuration>
+
+
+
+-----------
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+   <Properties>
+    <Property name="filename">./logs</Property>
+  </Properties>
+  <Appenders>
+    <RollingFile name="file" fileName="${filename}/logdemo.log"  filePattern="${filename}/logdemo-%d{HH-mm-ss-SSS}.log">
+            <PatternLayout>
+              <pattern>%d %p %c{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+            <SizeBasedTriggeringPolicy size="1 kb" />
+    </RollingFile>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="com.foo.Bar" level="trace" additivity="false">
+      <AppenderRef ref="Console"/>
+       <AppenderRef ref="file"/>
+    </Logger>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="file"/>
+    </Root>
+  </Loggers>
+</Configuration>
+
+
+* when the file reach 1 kb , new file will be created in this pattren : ${filename}/logdemo-%d{HH-mm-ss-SSS}.log
+
+* changing log levels for java packages
+
+    <Logger name="com.foo.Bar" level="trace" additivity="false">
+      <AppenderRef ref="Console"/>
+       <AppenderRef ref="file"/>
+    </Logger>
+
+* Log Messages can be stored at different places : Files, Database, Email , Console..etc
+
+* 3 Components : Logger(which class), Appender(where to store logs), Layout(how to print, pattren)
+
+* Log Levels : ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF  
+it will display that level and above it
+
+* In which classes we need to observe in those classes we need to create logger object : Repository , Service, Controller, Entity..etc
+
+* Pattern
+2022-11-19 9:50 889 - EmployeeController - saveEmp() - INFO - Employee created
+
+* Logger : it is a base object in Log4J. It enables/activates Logging/Moniter of a class/process.
+
+* class EmployeeController {
+        Logger log = LogManager.getLogger(EmployeeController.class);
+  }
+
+* Do not create logger for entity/POJO/DTO classes
+
+* Create loggers for controller, services etc 
+
+* Logger log = LogManager.getLogger(EmployeeController.class); ---> instead of writing manually like this 
+  Inject this code at runtime use Spring AOP(Aspect oriented programming)
+ 
+  
+* --- Priority Methods ------
+These are pre-defined methods exist in Logger object which prints messages based on type.
+
+TRACE : to find messages from  multiple stages/env/apps.
+
+DEBUG : to print final result of a process/internal details
+
+INFO : to indicate the Current Step :  Employee created, It is making the service call, Request entered into controller, It is fetching the data
+
+WARN : app related messages
+
+ERROR : To give details about exception
+
+FATAL : Environment related issues : complex issue can't be handles by programmer : database connection closed
+
+* Appender:- Location of messages to be stored. (classes)
+1. FileAppender      : Write data to Log File (__.log)
+2. ConsoleAppender   : Prints data at console
+3. JDBCAppender      : Store messages at Database table
+4. SMTPAppender      : Write messages to Email.
+
+
+* public void processData()
+  {
+       // read inputs
+      // validate them
+     // store in db
+    // return results
+  }
+  
+  
+  
+
+----------------------------------------------------------------------------------------------------------------------------
+
+File upload
+
+1. add dependency : commons.io and commons.fileupload
+2. configure multipartResolver
+3. create a form with enctype="multipart/form-data"
+
+
+Excel import to db 
+
+1. Postman is used to test the api
+2. Add dependency : apache poi --> to read write data from excel file , commons math
+3. 
+POIFS (Poor Obfuscation Implementation File System) − This component is the basic factor of all other POI elements. 
+It is used to read different files explicitly.
+
+HSSF (Horrible Spreadsheet Format) − It is used to read and write xls format of MS-Excel files.
+
+XSSF (XML Spreadsheet Format) − It is used for xlsx file format of MS-Excel.
+
+HPSF (Horrible Property Set Format) − It is used to extract property sets of the MS-Office files.
+
+HWPF (Horrible Word Processor Format) − It is used to read and write doc extension files of MS-Word.
+
+XWPF (XML Word Processor Format) − It is used to read and write docx extension files of MS-Word.
+
+HSLF (Horrible Slide Layout Format) − It is used for read, create, and edit PowerPoint presentations.
+
+HDGF (Horrible DiaGram Format) − It contains classes and methods for MS-Visio binary files.
+
+HPBF (Horrible PuBlisher Format) − It is used to read and write MS-Publisher files.
+
+=---------------------------------------------------------------------------------------------------------
+
+
+Jquery Validation
+
+Jquery validation plugin
+jquery.js
+bootstrap 4
+
+
+//targetting name attribute
+Rules : 
+
+1. Required
+2. minlength
+3. email
+4. equalTo
+5. Strong Password
+6. nowhitespace
+7. lettersonly
+8. alphanumeric
+9. lessThan
+10. lessThanEqual
+11. greaterThan
+12. greaterThanEqual
+15. range
+16. step
+17. number
+18. maxlength
+19. date
+20.digits
+21. min
+22. max
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+There are some commonly used charts for representing student data based on different factors:
+
+1. Bar Charts: Bar charts are a common choice for displaying data on department-wise or location-wise distributions. 
+   These charts are easy to understand and enable quick comparisons between different categories. 
+   For example, a vertical bar chart can be used to represent the number of students in each department, 
+   and a horizontal bar chart can be used to represent the distribution of students in different locations.
+
+2. Pie Charts: Pie charts are often used to represent the proportion of students based on a particular factor such as location, 
+   gender, or age group. However, pie charts can be difficult to read when there are too many categories or if the differences 
+   between categories are not significant.
+
+3. Line Charts: Line charts are useful for showing trends in student data over time. 
+   For example, a line chart can be used to represent the change in the number of students enrolled in a particular course 
+   over several years.
+
+4. Scatter Plots: Scatter plots are useful for showing the relationship between two variables, such as the correlation between 
+   a student's grades and attendance. Scatter plots can also be used to represent the distribution of students based on two factors 
+   such as age and grades.
+
+5. Maps: Maps can be used to represent the geographical distribution of students across different locations or countries. 
+   For example, a map can be used to represent the distribution of international students across different countries.
+
+
+To represent student data based on different types of charts, you can use various charting libraries available in JavaScript. 
+
+1. Chart.js - This is a popular open-source charting library that offers different types of charts, including bar charts, 
+   line charts, pie charts, and more. It is easy to use and highly customizable.
+
+2. D3.js - D3.js is a powerful charting library that provides a lot of flexibility to create custom charts. 
+   It is based on data-driven documents and is widely used for data visualization.
+
+3. Google Charts - This is a free charting library provided by Google that offers various types of charts, including bar charts, 
+   line charts, scatter plots, and more. It is easy to use and highly customizable.
+   
+4. FusionCharts is a popular JavaScript charting library that provides a wide range of chart types and customization options. 
+   It is widely used for creating interactive charts and dashboards for various applications, including business intelligence, 
+   data analytics, and data visualization.
+   
+   FusionCharts offers over 100 chart types, including column charts, line charts, area charts, bar charts, pie charts, and more. 
+   It also provides a range of customization options, including themes, color palettes, fonts, and animations. 
+   Additionally, FusionCharts supports real-time data streaming and can be integrated with various programming languages and frameworks, 
+   including JavaScript, AngularJS, ReactJS, and more.
+
+   One of the key features of FusionCharts is its ability to create interactive dashboards with multiple charts and widgets. 
+   It also supports drill-down functionality, which enables users to explore data at a more granular level. 
+   FusionCharts provides various APIs for interacting with the charts and can be integrated with various data sources, 
+   including JSON, CSV, and XML.
+
+  <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+  
+  
+FusionCharts() :  parameters
+
+type: A string that specifies the chart type, such as "column2d", "line", "pie", "bar2d", "area2d", etc.
+
+renderAt: A string that specifies the ID of the HTML element where the chart will be rendered.
+
+width: A string that specifies the width of the chart in pixels or percentage.
+
+height: A string that specifies the height of the chart in pixels or percentage.
+
+dataFormat: A string that specifies the format of the data source, such as "json", "xml", or "csv".
+
+dataSource: An object or a string that contains the chart data. The object should be in the format specified by the dataFormat property.
+
+events: An object that contains event handlers for the chart, such as "rendered", "click", "dataloaded", etc.
+
+link: An object that contains URL and target options for the chart link.
+
+containerBackgroundColor: A string that specifies the background color of the chart container.
+
+animation: A boolean that specifies whether to animate the chart.
+
+theme: A string that specifies the name of the chart theme, such as "fusion", "gammel", "candy", "ocean", etc.
+
+---------------------------------
+
+Here is a list of the pre-built themes available in FusionCharts:
+
+Fusion: This is the default theme and offers a clean, modern design.
+
+Candy: This theme offers bright colors and playful design elements.
+
+Ocean: This theme offers a cool blue color palette and subtle gradients.
+
+Zune: This theme offers a dark, sleek design with metallic accents.
+
+Carbon: This theme offers a modern design with a monochromatic color scheme.
+
+Gammel: This theme offers a vintage, textured design.
+
+Palette: This theme offers a vibrant color palette with flat design elements.
+
+FusionTime: This theme offers a clean, modern design optimized for time series charts.
+
+CandyTime: This theme offers a playful design optimized for time series charts.
+
+OceanTime: This theme offers a cool blue color palette and subtle gradients optimized for time series charts.
+
+ZuneTime: This theme offers a dark, sleek design with metallic accents optimized for time series charts.
+
+CarbonTime: This theme offers a modern design with a monochromatic color scheme optimized for time series charts.
+
+
+
+
+
+
+
+
+<%-- <td><img alt="student image" src="/student-management/resources/images/${st.imageName}" height="100" width="100" style="padding-top: 20px; padding-left: 50px"  /><br></td>
+ --%>
+
+
+
+	@RequestMapping(value = "/uploadImage", method = RequestMethod.GET)
+	public String uploadImage(@ModelAttribute("files") UploadFile uploadFile) {
+		log.info("------------------uploadImage method is called on /uploadImage mapping");
+		return "upload-file";
+	}
+
+	@RequestMapping(value = "/processImage", consumes = {
+			MediaType.MULTIPART_FORM_DATA_VALUE }, method = RequestMethod.POST) // ,consumes =
+																				// {MediaType.MULTIPART_FORM_DATA_VALUE}
+	public String processImage(@RequestParam MultipartFile file, ModelMap modelMap) {
+		// String loggedUser = (String) session.getAttribute("Sname");
+		log.info("------------------processImage method is called on /processImage mapping");
+		modelMap.addAttribute("file", file);
+
+		String name = file.getOriginalFilename();
+		log.info("file name is  : " + name);
+		// String filename = loggedUser + "_" +name;
+		if (!file.isEmpty()) {
+			try {
+				byte[] bytes = file.getBytes();
+
+				String path = "C:/Users/suchithra.v/eclipse-workspace/Student-Management-javaConfig/src/main/webapp/resources/images";
+				File dir = new File(path);
+				log.info("directory path  : " + dir);
+
+				// Create the file on server
+				File serverFile = new File(dir.getAbsolutePath() + File.separator + name);
+				log.info("server file path  : " + serverFile);
+
+				modelMap.addAttribute("imagePath", serverFile);
+				BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));
+				stream.write(bytes);
+				stream.close();
+				// session.setAttribute("uploadedFile", filename);
+
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+
+		}
+		return "upload-file";
+
+	}
+
+
+	@ResponseBody
+	@RequestMapping(value = "/thankyou", method = RequestMethod.GET)
+	public String thankyou() {
+		return "thank you ";
+	}
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+Bcrypt : it is the encryption technique to save the password.
+
+LDAP, OAuth2 are another method 
+
+to use this use libraries.
+
+Spring security helps in Authentication and Authorization
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+	
+	
+	
+	
+	
+		

@@ -1,0 +1,926 @@
+11:07:04.533 [Catalina-utility-1] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+11:07:05.509 [Catalina-utility-1] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+11:07:08.863 [Catalina-utility-1] INFO  com.sm.config.MailConfig - Mail config called
+11:07:08.940 [Catalina-utility-1] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+11:07:09.566 [Catalina-utility-1] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+11:07:37.631 [main] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+11:07:38.692 [main] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+11:07:42.713 [main] INFO  com.sm.config.MailConfig - Mail config called
+11:07:42.760 [main] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+11:07:43.482 [main] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+11:07:44.367 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------start method is called on / mapping
+11:08:57.871 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------processLogin method is called on /processLogin mapping
+11:08:59.329 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------showDashboard method is called on /dashboardPage mapping
+11:08:59.329 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCourse() method of StudentDAO class
+11:08:59.329 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCourse() method 
+11:08:59.924 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - course :BCA
+11:08:59.925 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - count :1
+11:08:59.929 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - course :BSC
+11:08:59.929 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - count :1
+11:08:59.929 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - course :BBA
+11:08:59.929 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - count :1
+11:08:59.929 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - course :BBM
+11:08:59.929 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - count :1
+11:08:59.929 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - course :B.Com
+11:08:59.929 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - count :1
+11:08:59.934 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - chartDataList1 :[ChatData [course=BCA, count=1, country=null], ChatData [course=BSC, count=1, country=null], ChatData [course=BBA, count=1, country=null], ChatData [course=BBM, count=1, country=null], ChatData [course=B.Com, count=1, country=null]]
+11:08:59.935 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCountry() method of StudentDAO class
+11:08:59.935 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCountry() method 
+11:08:59.941 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - course :India
+11:08:59.941 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - count :2
+11:08:59.941 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - course :US
+11:08:59.942 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - count :1
+11:08:59.942 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - course :Japan
+11:08:59.942 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - count :1
+11:08:59.942 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - course :Canada
+11:08:59.942 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - count :1
+11:08:59.942 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - chartDataList2 :[ChatData [course=India, count=2, country=null], ChatData [course=US, count=1, country=null], ChatData [course=Japan, count=1, country=null], ChatData [course=Canada, count=1, country=null]]
+11:10:31.975 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------showStudentList method is called on /showStudent mapping
+11:10:31.975 [http-nio-8082-exec-1] DEBUG com.sm.controllers.StudentController - ------------------Calling StudentService class method called loadStudents()
+11:10:31.975 [http-nio-8082-exec-1] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+11:10:31.975 [http-nio-8082-exec-1] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+11:10:32.037 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=null, mobile=9876787656, course=BCA, country=India, imageName=null]
+11:10:32.037 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+11:10:32.037 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+11:10:32.037 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+11:10:32.037 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+11:10:32.041 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------adding the captured value to model
+11:10:32.041 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------set the studentList with model object and send it to student-list view
+11:12:07.682 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------showImport method is called on /showImport mapping
+11:12:12.775 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------showDashboard method is called on /dashboardPage mapping
+11:12:12.776 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCourse() method of StudentDAO class
+11:12:12.776 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCourse() method 
+11:12:12.781 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BCA
+11:12:12.782 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :1
+11:12:12.782 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BSC
+11:12:12.782 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :1
+11:12:12.782 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BBA
+11:12:12.782 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :1
+11:12:12.782 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BBM
+11:12:12.782 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :1
+11:12:12.783 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :B.Com
+11:12:12.783 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :1
+11:12:12.783 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - chartDataList1 :[ChatData [course=BCA, count=1, country=null], ChatData [course=BSC, count=1, country=null], ChatData [course=BBA, count=1, country=null], ChatData [course=BBM, count=1, country=null], ChatData [course=B.Com, count=1, country=null]]
+11:12:12.784 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCountry() method of StudentDAO class
+11:12:12.784 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCountry() method 
+11:12:12.790 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :India
+11:12:12.790 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :2
+11:12:12.790 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :US
+11:12:12.791 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :1
+11:12:12.791 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :Japan
+11:12:12.791 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :1
+11:12:12.791 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :Canada
+11:12:12.791 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :1
+11:12:12.792 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - chartDataList2 :[ChatData [course=India, count=2, country=null], ChatData [course=US, count=1, country=null], ChatData [course=Japan, count=1, country=null], ChatData [course=Canada, count=1, country=null]]
+11:12:18.321 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+11:12:18.322 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+11:12:18.322 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+11:12:28.217 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+11:12:28.217 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+11:12:28.217 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+11:12:31.561 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+11:12:31.561 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+11:12:31.562 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+11:12:36.013 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - ------------------showDashboard method is called on /dashboardPage mapping
+11:12:36.013 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCourse() method of StudentDAO class
+11:12:36.013 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCourse() method 
+11:12:36.017 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - course :BCA
+11:12:36.017 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - count :1
+11:12:36.017 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - course :BSC
+11:12:36.017 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - count :1
+11:12:36.017 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - course :BBA
+11:12:36.017 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - count :1
+11:12:36.018 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - course :BBM
+11:12:36.018 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - count :1
+11:12:36.018 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - course :B.Com
+11:12:36.018 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - count :1
+11:12:36.018 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - chartDataList1 :[ChatData [course=BCA, count=1, country=null], ChatData [course=BSC, count=1, country=null], ChatData [course=BBA, count=1, country=null], ChatData [course=BBM, count=1, country=null], ChatData [course=B.Com, count=1, country=null]]
+11:12:36.018 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCountry() method of StudentDAO class
+11:12:36.018 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCountry() method 
+11:12:36.025 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - course :India
+11:12:36.026 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - count :2
+11:12:36.026 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - course :US
+11:12:36.026 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - count :1
+11:12:36.027 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - course :Japan
+11:12:36.027 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - count :1
+11:12:36.027 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - course :Canada
+11:12:36.028 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - count :1
+11:12:36.029 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - chartDataList2 :[ChatData [course=India, count=2, country=null], ChatData [course=US, count=1, country=null], ChatData [course=Japan, count=1, country=null], ChatData [course=Canada, count=1, country=null]]
+11:12:39.007 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+11:12:39.007 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+11:12:39.007 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+11:12:40.716 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+11:12:40.717 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+11:12:40.717 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+11:12:42.670 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+11:12:42.670 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+11:12:42.670 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+11:12:43.423 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+11:12:43.423 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+11:12:43.423 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+11:12:44.174 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+11:12:44.175 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+11:12:44.175 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+11:12:46.138 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+11:12:46.138 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+11:12:46.138 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+11:12:48.153 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------showDashboard method is called on /dashboardPage mapping
+11:12:48.155 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCourse() method of StudentDAO class
+11:12:48.155 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCourse() method 
+11:12:48.160 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - course :BCA
+11:12:48.160 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - count :1
+11:12:48.160 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - course :BSC
+11:12:48.160 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - count :1
+11:12:48.160 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - course :BBA
+11:12:48.161 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - count :1
+11:12:48.161 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - course :BBM
+11:12:48.161 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - count :1
+11:12:48.161 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - course :B.Com
+11:12:48.161 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - count :1
+11:12:48.161 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - chartDataList1 :[ChatData [course=BCA, count=1, country=null], ChatData [course=BSC, count=1, country=null], ChatData [course=BBA, count=1, country=null], ChatData [course=BBM, count=1, country=null], ChatData [course=B.Com, count=1, country=null]]
+11:12:48.161 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCountry() method of StudentDAO class
+11:12:48.162 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCountry() method 
+11:12:48.168 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - course :India
+11:12:48.169 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - count :2
+11:12:48.169 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - course :US
+11:12:48.169 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - count :1
+11:12:48.169 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - course :Japan
+11:12:48.169 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - count :1
+11:12:48.169 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - course :Canada
+11:12:48.170 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - count :1
+11:12:48.170 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - chartDataList2 :[ChatData [course=India, count=2, country=null], ChatData [course=US, count=1, country=null], ChatData [course=Japan, count=1, country=null], ChatData [course=Canada, count=1, country=null]]
+11:12:50.025 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------showImport method is called on /showImport mapping
+11:12:52.234 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------showStudentList method is called on /showStudent mapping
+11:12:52.235 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - ------------------Calling StudentService class method called loadStudents()
+11:12:52.235 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+11:12:52.235 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+11:12:52.243 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=null, mobile=9876787656, course=BCA, country=India, imageName=null]
+11:12:52.243 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+11:12:52.243 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+11:12:52.243 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+11:12:52.244 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+11:12:52.244 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------adding the captured value to model
+11:12:52.244 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------set the studentList with model object and send it to student-list view
+11:12:54.259 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - ------------------showImport method is called on /showImport mapping
+11:12:55.486 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------showDashboard method is called on /dashboardPage mapping
+11:12:55.486 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCourse() method of StudentDAO class
+11:12:55.486 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCourse() method 
+11:12:55.491 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - course :BCA
+11:12:55.491 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - count :1
+11:12:55.491 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - course :BSC
+11:12:55.492 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - count :1
+11:12:55.492 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - course :BBA
+11:12:55.492 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - count :1
+11:12:55.492 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - course :BBM
+11:12:55.492 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - count :1
+11:12:55.492 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - course :B.Com
+11:12:55.492 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - count :1
+11:12:55.493 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - chartDataList1 :[ChatData [course=BCA, count=1, country=null], ChatData [course=BSC, count=1, country=null], ChatData [course=BBA, count=1, country=null], ChatData [course=BBM, count=1, country=null], ChatData [course=B.Com, count=1, country=null]]
+11:12:55.493 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCountry() method of StudentDAO class
+11:12:55.493 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCountry() method 
+11:12:55.499 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - course :India
+11:12:55.499 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - count :2
+11:12:55.499 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - course :US
+11:12:55.500 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - count :1
+11:12:55.500 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - course :Japan
+11:12:55.500 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - count :1
+11:12:55.501 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - course :Canada
+11:12:55.501 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - count :1
+11:12:55.501 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - chartDataList2 :[ChatData [course=India, count=2, country=null], ChatData [course=US, count=1, country=null], ChatData [course=Japan, count=1, country=null], ChatData [course=Canada, count=1, country=null]]
+11:12:58.745 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+11:12:58.745 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+11:12:58.745 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+11:13:10.093 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------procesLogout method is called on /processLogout mapping
+11:13:10.355 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+11:13:21.770 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+11:13:24.916 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+11:13:25.869 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+11:13:26.001 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+11:13:26.240 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+11:17:06.750 [Catalina-utility-2] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+11:17:07.499 [Catalina-utility-2] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+11:17:11.025 [Catalina-utility-2] INFO  com.sm.config.MailConfig - Mail config called
+11:17:11.057 [Catalina-utility-2] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+11:17:11.530 [Catalina-utility-2] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+11:45:54.964 [Catalina-utility-2] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+11:45:55.607 [Catalina-utility-2] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+11:45:58.692 [Catalina-utility-2] INFO  com.sm.config.MailConfig - Mail config called
+11:45:58.731 [Catalina-utility-2] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+11:45:59.194 [Catalina-utility-2] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+11:47:21.752 [Catalina-utility-1] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+11:47:22.496 [Catalina-utility-1] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+11:47:25.196 [Catalina-utility-1] INFO  com.sm.config.MailConfig - Mail config called
+11:47:25.226 [Catalina-utility-1] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+11:47:25.650 [Catalina-utility-1] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+11:47:40.118 [Catalina-utility-1] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+11:47:40.829 [Catalina-utility-1] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+11:47:43.751 [Catalina-utility-1] INFO  com.sm.config.MailConfig - Mail config called
+11:47:43.781 [Catalina-utility-1] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+11:47:44.218 [Catalina-utility-1] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+11:54:17.781 [Catalina-utility-1] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+11:54:18.449 [Catalina-utility-1] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+11:54:21.152 [Catalina-utility-1] INFO  com.sm.config.MailConfig - Mail config called
+11:54:21.183 [Catalina-utility-1] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+11:54:21.622 [Catalina-utility-1] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+11:58:30.272 [Catalina-utility-2] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+11:58:30.957 [Catalina-utility-2] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+11:58:34.546 [Catalina-utility-2] INFO  com.sm.config.MailConfig - Mail config called
+11:58:34.577 [Catalina-utility-2] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+11:58:35.031 [Catalina-utility-2] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+11:59:16.409 [Catalina-utility-1] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+11:59:17.122 [Catalina-utility-1] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+11:59:20.228 [Catalina-utility-1] INFO  com.sm.config.MailConfig - Mail config called
+11:59:20.267 [Catalina-utility-1] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+11:59:20.734 [Catalina-utility-1] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+11:59:35.081 [Catalina-utility-2] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+11:59:35.804 [Catalina-utility-2] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+11:59:39.430 [Catalina-utility-2] INFO  com.sm.config.MailConfig - Mail config called
+11:59:39.475 [Catalina-utility-2] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+11:59:39.932 [Catalina-utility-2] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+11:59:54.101 [Catalina-utility-1] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+11:59:54.786 [Catalina-utility-1] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+11:59:57.559 [Catalina-utility-1] INFO  com.sm.config.MailConfig - Mail config called
+11:59:57.592 [Catalina-utility-1] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+11:59:58.076 [Catalina-utility-1] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+15:02:17.527 [main] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+15:02:19.882 [main] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+15:02:30.356 [main] INFO  com.sm.config.MailConfig - Mail config called
+15:02:30.462 [main] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+15:02:31.900 [main] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+15:02:33.055 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - ------------------start method is called on / mapping
+15:02:39.685 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------processLogin method is called on /processLogin mapping
+15:02:39.710 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------showDashboard method is called on /dashboardPage mapping
+15:02:39.710 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCourse() method of StudentDAO class
+15:02:39.711 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCourse() method 
+15:02:40.614 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - course :BCA
+15:02:40.615 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - count :1
+15:02:40.631 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - course :BSC
+15:02:40.632 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - count :1
+15:02:40.632 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - course :BBA
+15:02:40.632 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - count :1
+15:02:40.632 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - course :BBM
+15:02:40.632 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - count :1
+15:02:40.633 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - course :B.Com
+15:02:40.633 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - count :1
+15:02:40.640 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - chartDataList1 :[ChatData [course=BCA, count=1, country=null], ChatData [course=BSC, count=1, country=null], ChatData [course=BBA, count=1, country=null], ChatData [course=BBM, count=1, country=null], ChatData [course=B.Com, count=1, country=null]]
+15:02:40.641 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCountry() method of StudentDAO class
+15:02:40.641 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCountry() method 
+15:02:40.654 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - course :India
+15:02:40.654 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - count :2
+15:02:40.655 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - course :US
+15:02:40.655 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - count :1
+15:02:40.655 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - course :Japan
+15:02:40.655 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - count :1
+15:02:40.656 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - course :Canada
+15:02:40.656 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - count :1
+15:02:40.656 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - chartDataList2 :[ChatData [course=India, count=2, country=null], ChatData [course=US, count=1, country=null], ChatData [course=Japan, count=1, country=null], ChatData [course=Canada, count=1, country=null]]
+15:02:46.785 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------showImport method is called on /showImport mapping
+15:05:43.397 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------importExcel method is called on /importExcel mapping
+15:05:44.549 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentDAO class
+15:05:44.549 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called saveStudent() method 
+15:05:44.558 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - 106 7685453435 punith@gmail.com
+15:05:44.697 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------------ 1 record inserted
+15:05:44.698 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Import rows 1
+15:05:44.699 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentDAO class
+15:05:44.699 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called saveStudent() method 
+15:05:44.700 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - 107 6564342313 ram@gmail.com
+15:05:44.720 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------------ 1 record inserted
+15:05:44.720 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Import rows 2
+15:05:44.721 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentDAO class
+15:05:44.721 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called saveStudent() method 
+15:05:44.724 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - 108 7654876545 kiran@gmail.com
+15:05:44.743 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------------ 1 record inserted
+15:05:44.743 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Import rows 3
+15:05:44.745 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentDAO class
+15:05:44.746 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called saveStudent() method 
+15:05:44.748 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - 109 9873357654 sonu@gmail.com
+15:05:44.763 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------------ 1 record inserted
+15:05:44.763 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Import rows 4
+15:05:44.765 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentDAO class
+15:05:44.765 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called saveStudent() method 
+15:05:44.767 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - 110 7653452345 geetha@gmail.com
+15:05:44.782 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------------ 1 record inserted
+15:05:44.782 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Import rows 5
+15:05:44.783 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentDAO class
+15:05:44.783 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called saveStudent() method 
+15:05:44.786 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - 111 6754323454 uma@gmail.com
+15:05:44.801 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------------ 1 record inserted
+15:05:44.801 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Import rows 6
+15:05:44.803 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentDAO class
+15:05:44.803 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called saveStudent() method 
+15:05:44.804 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - 112 7651234323 tom@gmail.com
+15:05:44.822 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------------ 1 record inserted
+15:05:44.822 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Import rows 7
+15:05:44.823 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentDAO class
+15:05:44.824 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called saveStudent() method 
+15:05:44.825 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - 113 8123214543 dora@gmail.com
+15:05:44.845 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------------ 1 record inserted
+15:05:44.845 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Import rows 8
+15:05:44.846 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentDAO class
+15:05:44.846 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called saveStudent() method 
+15:05:44.848 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - 114 7651324543 pavan@gmail.com
+15:05:44.868 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------------ 1 record inserted
+15:05:44.869 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Import rows 9
+15:05:44.870 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentDAO class
+15:05:44.870 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called saveStudent() method 
+15:05:44.872 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - 115 7610972454 vishnu@gmail.com
+15:05:44.897 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------------ 1 record inserted
+15:05:44.897 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Import rows 10
+15:05:44.914 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------showStudentList method is called on /showStudent mapping
+15:05:44.914 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------Calling StudentService class method called loadStudents()
+15:05:44.914 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+15:05:44.914 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+15:05:44.940 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=null, mobile=9876787656, course=BCA, country=India, imageName=null]
+15:05:44.940 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+15:05:44.940 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+15:05:44.940 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+15:05:44.940 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+15:05:44.940 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+15:05:44.940 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+15:05:44.940 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+15:05:44.941 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+15:05:44.941 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+15:05:44.941 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+15:05:44.941 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+15:05:44.941 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+15:05:44.941 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+15:05:44.941 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+15:05:44.942 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------adding the captured value to model
+15:05:44.942 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------set the studentList with model object and send it to student-list view
+15:06:16.985 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------showDashboard method is called on /dashboardPage mapping
+15:06:16.985 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCourse() method of StudentDAO class
+15:06:16.985 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCourse() method 
+15:06:16.991 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BCA
+15:06:16.991 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :4
+15:06:16.991 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BSC
+15:06:16.991 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :1
+15:06:16.993 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BBA
+15:06:16.993 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :5
+15:06:16.993 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BBM
+15:06:16.993 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :3
+15:06:16.993 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :B.Com
+15:06:16.993 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :2
+15:06:16.994 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - chartDataList1 :[ChatData [course=BCA, count=4, country=null], ChatData [course=BSC, count=1, country=null], ChatData [course=BBA, count=5, country=null], ChatData [course=BBM, count=3, country=null], ChatData [course=B.Com, count=2, country=null]]
+15:06:16.994 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCountry() method of StudentDAO class
+15:06:16.994 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCountry() method 
+15:06:17.006 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :India
+15:06:17.007 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :4
+15:06:17.007 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :US
+15:06:17.007 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :5
+15:06:17.007 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :Japan
+15:06:17.007 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :3
+15:06:17.008 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :Canada
+15:06:17.008 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :3
+15:06:17.008 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - chartDataList2 :[ChatData [course=India, count=4, country=null], ChatData [course=US, count=5, country=null], ChatData [course=Japan, count=3, country=null], ChatData [course=Canada, count=3, country=null]]
+15:06:34.680 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------showStudentList method is called on /showStudent mapping
+15:06:34.680 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------Calling StudentService class method called loadStudents()
+15:06:34.680 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+15:06:34.681 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+15:06:34.695 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=null, mobile=9876787656, course=BCA, country=India, imageName=null]
+15:06:34.697 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+15:06:34.698 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+15:06:34.698 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+15:06:34.698 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+15:06:34.698 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+15:06:34.698 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+15:06:34.699 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+15:06:34.699 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+15:06:34.699 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+15:06:34.699 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+15:06:34.699 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+15:06:34.700 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+15:06:34.700 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+15:06:34.700 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+15:06:34.701 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------adding the captured value to model
+15:06:34.701 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------set the studentList with model object and send it to student-list view
+15:06:41.099 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------updateStudent method is called on /updateStudent mapping
+15:06:41.099 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - ------------------------ calling getStudent() method of StudentService class
+15:06:41.099 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - ------------------------ calling getStudent() method of StudentDAO class
+15:06:41.100 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - ------------------------ called getStudent() method 
+15:06:41.149 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - student fetched : Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=null, mobile=9876787656, course=BCA, country=India, imageName=null]
+15:09:52.422 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------saveStudent method is called on /saveStudent mapping
+15:09:52.422 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - image name is  : 10.png
+15:09:52.423 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - directory path  : C:\Users\admin\eclipse-workspace\Student-Management-javaConfig\src\main\webapp\resources\images
+15:09:52.423 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - server file path  : C:\Users\admin\eclipse-workspace\Student-Management-javaConfig\src\main\webapp\resources\images\10.png
+15:09:52.428 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------------ student id is not 0, so do update
+15:09:52.429 [http-nio-8082-exec-1] DEBUG com.sm.controllers.StudentController - ------------------------ calling update() method of StudentService class
+15:09:52.429 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - --------------student information that is getting updated :Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=null]
+15:09:52.429 [http-nio-8082-exec-1] DEBUG com.sm.controllers.StudentController - ------------------------ calling update() method of StudentDAO class
+15:09:52.430 [http-nio-8082-exec-1] DEBUG com.sm.controllers.StudentController - ------------------------ called update() method 
+15:09:52.626 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------------ 1 record updated
+15:09:52.635 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------showStudentList method is called on /showStudent mapping
+15:09:52.636 [http-nio-8082-exec-3] DEBUG com.sm.controllers.StudentController - ------------------Calling StudentService class method called loadStudents()
+15:09:52.636 [http-nio-8082-exec-3] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+15:09:52.636 [http-nio-8082-exec-3] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+15:09:52.679 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=10.png]
+15:09:52.679 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+15:09:52.679 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+15:09:52.680 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+15:09:52.680 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+15:09:52.680 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+15:09:52.680 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+15:09:52.681 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+15:09:52.681 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+15:09:52.681 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+15:09:52.681 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+15:09:52.682 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+15:09:52.682 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+15:09:52.682 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+15:09:52.683 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+15:09:52.683 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------adding the captured value to model
+15:09:52.683 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------set the studentList with model object and send it to student-list view
+15:10:12.164 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------updateStudent method is called on /updateStudent mapping
+15:10:12.164 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling getStudent() method of StudentService class
+15:10:12.166 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ calling getStudent() method of StudentDAO class
+15:10:12.166 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called getStudent() method 
+15:10:12.183 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - student fetched : Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=10.png]
+15:10:24.981 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------showStudentList method is called on /showStudent mapping
+15:10:24.981 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - ------------------Calling StudentService class method called loadStudents()
+15:10:24.981 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+15:10:24.981 [http-nio-8082-exec-7] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+15:10:24.999 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=10.png]
+15:10:25.000 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+15:10:25.000 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+15:10:25.001 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+15:10:25.001 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+15:10:25.001 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+15:10:25.002 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+15:10:25.002 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+15:10:25.002 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+15:10:25.002 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+15:10:25.002 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+15:10:25.002 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+15:10:25.002 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+15:10:25.002 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+15:10:25.003 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+15:10:25.003 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------adding the captured value to model
+15:10:25.003 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------set the studentList with model object and send it to student-list view
+15:10:30.165 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------ exportPdf method is called on / exportPdf mapping
+15:10:30.167 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+15:10:30.167 [http-nio-8082-exec-8] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+15:10:30.186 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=10.png]
+15:10:30.187 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+15:10:30.187 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+15:10:30.187 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+15:10:30.187 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+15:10:30.187 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+15:10:30.187 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+15:10:30.188 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+15:10:30.188 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+15:10:30.188 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+15:10:30.188 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+15:10:30.189 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+15:10:30.189 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+15:10:30.189 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+15:10:30.189 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+15:10:43.727 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - ------------------ exportExcel method is called on /exportExcel mapping
+15:10:43.727 [http-nio-8082-exec-9] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+15:10:43.728 [http-nio-8082-exec-9] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+15:10:43.749 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=10.png]
+15:10:43.749 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+15:10:43.749 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+15:10:43.749 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+15:10:43.749 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+15:10:43.749 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+15:10:43.750 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+15:10:43.750 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+15:10:43.750 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+15:10:43.750 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+15:10:43.750 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+15:10:43.750 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+15:10:43.750 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+15:10:43.751 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+15:10:43.752 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+15:10:43.752 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - fetched the list successfully
+15:10:43.761 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called export excel constructor
+15:10:43.967 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - Created workbook
+15:10:43.967 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called export method
+15:10:43.968 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called header lines method
+15:10:44.031 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.290 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.293 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.296 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.298 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.302 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.304 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.306 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.308 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.310 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.312 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - header created
+15:10:44.312 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called data lines method
+15:10:44.313 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.340 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.345 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.351 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.355 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.358 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.363 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.366 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.371 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.376 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.380 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.380 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.397 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.401 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.407 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.410 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.413 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.416 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.421 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.425 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.431 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.433 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.434 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.437 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.440 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.443 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.446 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.449 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.453 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.457 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.461 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.465 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.471 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.471 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.476 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.479 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.482 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.486 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.488 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.492 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.495 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.498 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.502 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.506 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.506 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.509 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.514 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.519 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.522 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.526 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.529 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.536 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.542 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.546 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.548 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.550 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.558 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.564 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.570 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.574 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.579 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.586 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.591 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.597 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.603 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.608 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.608 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.614 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.624 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.629 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.634 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.639 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.645 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.652 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.659 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.665 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.673 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.673 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.678 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.684 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.690 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.694 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.699 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.702 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.707 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.713 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.717 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.722 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.722 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.728 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.737 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.743 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.748 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.757 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.761 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.768 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.774 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.778 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.784 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.785 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.789 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.795 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.800 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.806 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.811 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.815 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.822 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.828 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.832 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.837 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.838 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.844 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.850 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.857 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.863 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.871 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.876 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.881 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.888 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.892 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.896 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.897 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.905 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.911 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.915 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.921 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.926 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.929 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.938 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.945 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.948 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.957 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:44.958 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.963 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.970 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.975 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.979 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.985 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.991 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:44.999 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.004 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.008 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.011 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:45.012 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.016 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.021 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.025 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.027 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.030 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.033 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.037 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.041 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.043 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.045 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:45.046 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.050 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.055 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.059 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.062 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.066 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.069 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.072 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.078 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.082 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - called create cell method
+15:10:45.087 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - created data
+15:10:45.087 [http-nio-8082-exec-9] INFO  com.sm.helper.UserExcelExporter - done
+15:11:51.890 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------ exportPdf method is called on / exportPdf mapping
+15:11:51.891 [http-nio-8082-exec-1] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+15:11:51.891 [http-nio-8082-exec-1] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+15:11:51.907 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=10.png]
+15:11:51.907 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+15:11:51.907 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+15:11:51.907 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+15:11:51.908 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+15:11:51.908 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+15:11:51.908 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+15:11:51.908 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+15:11:51.908 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+15:11:51.908 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+15:11:51.908 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+15:11:51.908 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+15:11:51.908 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+15:11:51.908 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+15:11:51.908 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+15:12:14.451 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - emailTo: suchitranv5@gmail.com
+15:12:14.451 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - subject: Student List Data
+15:12:14.452 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - message: Hi,
+
+  Please find the attached document.
+
+Regards,
+Suchithra NV
+15:12:14.452 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+15:12:14.452 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+15:12:14.465 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=10.png]
+15:12:14.465 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+15:12:14.465 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+15:12:14.466 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - fetched the list successfully
+16:00:54.435 [main] INFO  com.sm.config.AppInitializer - AppIniilizer config called
+16:00:55.465 [main] INFO  com.sm.config.HibernateConfig - HibernateConfig config called
+16:01:01.371 [main] INFO  com.sm.config.MailConfig - Mail config called
+16:01:01.414 [main] INFO  com.sm.config.MultipartConfig - MultipartConfig config called
+16:01:02.034 [main] INFO  com.sm.config.WebMvcConfig - WebMvc config called
+16:01:02.699 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------start method is called on / mapping
+16:01:35.724 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------processLogin method is called on /processLogin mapping
+16:01:35.744 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+16:01:38.299 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - ------------------processLogin method is called on /processLogin mapping
+16:01:38.313 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+16:01:39.979 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - ------------------processLogin method is called on /processLogin mapping
+16:01:39.988 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+16:01:50.608 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------processLogin method is called on /processLogin mapping
+16:01:50.620 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+16:01:53.445 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------processLogin method is called on /processLogin mapping
+16:01:53.454 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+16:02:32.702 [http-nio-8082-exec-9] INFO  com.sm.controllers.StudentController - ------------------processLogin method is called on /processLogin mapping
+16:02:32.718 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------showDashboard method is called on /dashboardPage mapping
+16:02:32.718 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCourse() method of StudentDAO class
+16:02:32.719 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCourse() method 
+16:02:33.194 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - course :BCA
+16:02:33.194 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - count :4
+16:02:33.199 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - course :BSC
+16:02:33.199 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - count :1
+16:02:33.199 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - course :BBA
+16:02:33.199 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - count :5
+16:02:33.199 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - course :BBM
+16:02:33.199 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - count :3
+16:02:33.200 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - course :B.Com
+16:02:33.200 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - count :2
+16:02:33.203 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - chartDataList1 :[ChatData [course=BCA, count=4, country=null], ChatData [course=BSC, count=1, country=null], ChatData [course=BBA, count=5, country=null], ChatData [course=BBM, count=3, country=null], ChatData [course=B.Com, count=2, country=null]]
+16:02:33.203 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCountry() method of StudentDAO class
+16:02:33.204 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCountry() method 
+16:02:33.209 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - course :India
+16:02:33.209 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - count :4
+16:02:33.209 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - course :US
+16:02:33.209 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - count :5
+16:02:33.209 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - course :Japan
+16:02:33.210 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - count :3
+16:02:33.210 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - course :Canada
+16:02:33.210 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - count :3
+16:02:33.210 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - chartDataList2 :[ChatData [course=India, count=4, country=null], ChatData [course=US, count=5, country=null], ChatData [course=Japan, count=3, country=null], ChatData [course=Canada, count=3, country=null]]
+16:02:38.401 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - ------------------showStudentList method is called on /showStudent mapping
+16:02:38.401 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - ------------------Calling StudentService class method called loadStudents()
+16:02:38.401 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+16:02:38.401 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+16:02:38.491 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=10.png]
+16:02:38.491 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+16:02:38.491 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+16:02:38.491 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+16:02:38.491 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+16:02:38.492 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+16:02:38.492 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+16:02:38.492 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+16:02:38.492 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+16:02:38.492 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+16:02:38.492 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+16:02:38.492 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+16:02:38.492 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+16:02:38.492 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+16:02:38.492 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+16:02:38.495 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - ------------------adding the captured value to model
+16:02:38.496 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - ------------------set the studentList with model object and send it to student-list view
+16:02:51.007 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - emailTo: suchitranv5@gmail.com
+16:02:51.008 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - subject: Student List Data
+16:02:51.008 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - message: Hi,
+
+  Please find the attached document.
+
+Regards,
+Suchithra NV
+16:02:51.008 [http-nio-8082-exec-1] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+16:02:51.008 [http-nio-8082-exec-1] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+16:02:51.029 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=10.png]
+16:02:51.030 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+16:02:51.030 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+16:02:51.030 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+16:02:51.030 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+16:02:51.030 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+16:02:51.030 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+16:02:51.030 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+16:02:51.031 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+16:02:51.031 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+16:02:51.031 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+16:02:51.031 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+16:02:51.032 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+16:02:51.032 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+16:02:51.032 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+16:02:51.032 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - fetched the list successfully
+16:02:56.549 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------showStudentList method is called on /showStudent mapping
+16:02:56.550 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------Calling StudentService class method called loadStudents()
+16:02:56.550 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+16:02:56.550 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+16:02:56.577 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=10.png]
+16:02:56.577 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+16:02:56.577 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+16:02:56.577 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+16:02:56.578 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+16:02:56.578 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+16:02:56.578 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+16:02:56.578 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+16:02:56.578 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+16:02:56.579 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+16:02:56.579 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+16:02:56.579 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+16:02:56.579 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+16:02:56.579 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+16:02:56.579 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+16:02:56.580 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------adding the captured value to model
+16:02:56.580 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------set the studentList with model object and send it to student-list view
+16:03:22.360 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+16:03:22.361 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+16:03:22.361 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+16:07:22.476 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+16:07:22.476 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+16:07:22.477 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+16:07:27.789 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------start method is called on / mapping
+16:11:05.567 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------processLogin method is called on /processLogin mapping
+16:11:05.579 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+16:11:14.577 [http-nio-8082-exec-8] INFO  com.sm.controllers.StudentController - ------------------processLogin method is called on /processLogin mapping
+16:11:14.589 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+16:11:36.289 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------processLogin method is called on /processLogin mapping
+16:11:36.299 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------showDashboard method is called on /dashboardPage mapping
+16:11:36.300 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCourse() method of StudentDAO class
+16:11:36.300 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCourse() method 
+16:11:36.305 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BCA
+16:11:36.306 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :4
+16:11:36.306 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BSC
+16:11:36.306 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :1
+16:11:36.306 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BBA
+16:11:36.306 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :5
+16:11:36.306 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :BBM
+16:11:36.306 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :3
+16:11:36.306 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :B.Com
+16:11:36.306 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :2
+16:11:36.306 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - chartDataList1 :[ChatData [course=BCA, count=4, country=null], ChatData [course=BSC, count=1, country=null], ChatData [course=BBA, count=5, country=null], ChatData [course=BBM, count=3, country=null], ChatData [course=B.Com, count=2, country=null]]
+16:11:36.306 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------ calling groupStudentDataByCountry() method of StudentDAO class
+16:11:36.306 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - ------------------------ called groupStudentDataByCountry() method 
+16:11:36.311 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :India
+16:11:36.312 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :4
+16:11:36.312 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :US
+16:11:36.313 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :5
+16:11:36.313 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :Japan
+16:11:36.313 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :3
+16:11:36.313 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - course :Canada
+16:11:36.313 [http-nio-8082-exec-4] DEBUG com.sm.controllers.StudentController - count :3
+16:11:36.314 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - chartDataList2 :[ChatData [course=India, count=4, country=null], ChatData [course=US, count=5, country=null], ChatData [course=Japan, count=3, country=null], ChatData [course=Canada, count=3, country=null]]
+16:11:48.351 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------addStudent method is called on /addStudent mapping
+16:11:48.351 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------creating Student object
+16:11:48.352 [http-nio-8082-exec-7] INFO  com.sm.controllers.StudentController - ------------------set the student with model object and send it to add-update-student view
+16:12:56.982 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------saveStudent method is called on /saveStudent mapping
+16:12:56.982 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - image name is  : 9.png
+16:12:56.982 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - directory path  : C:\Users\admin\eclipse-workspace\Student-Management-javaConfig\src\main\webapp\resources\images
+16:12:56.983 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - server file path  : C:\Users\admin\eclipse-workspace\Student-Management-javaConfig\src\main\webapp\resources\images\9.png
+16:12:56.987 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------------ student id is 0, so do insert
+16:12:56.987 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentService class
+16:12:56.988 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - ------------------------ calling saveStudent() method of StudentDAO class
+16:12:56.988 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - ------------------------ called saveStudent() method 
+16:12:56.997 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - 50 7634565435 sange@gmail.com
+16:12:57.203 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------------ 1 record inserted
+16:13:01.414 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------showStudentList method is called on /showStudent mapping
+16:13:01.414 [http-nio-8082-exec-3] DEBUG com.sm.controllers.StudentController - ------------------Calling StudentService class method called loadStudents()
+16:13:01.415 [http-nio-8082-exec-3] DEBUG com.sm.controllers.StudentController - ------------------ calling loadStudents() method of StudentDAO class
+16:13:01.415 [http-nio-8082-exec-3] DEBUG com.sm.controllers.StudentController - ------------------ called loadStudents() method
+16:13:01.432 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=0, rollno=50, fname=sangi, lname=s, dob=09-02-1999, gender=Female, email=sange@gmail.com, password=m20mp33, mobile=7634565435, course=BBA, country=Canada, imageName=9.png]
+16:13:01.432 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=1, rollno=101, fname=Rekha, lname=H, dob=12-09-2001, gender=Female, email=rekha@gmail.com, password=m0kioa, mobile=9876787656, course=BCA, country=India, imageName=10.png]
+16:13:01.432 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=2, rollno=102, fname=Suchithra, lname=V, dob=01-02-2002, gender=Female, email=suchithra@gmail.com, password=null, mobile=8767545678, course=BSC, country=India, imageName=null]
+16:13:01.432 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=3, rollno=103, fname=Thanuja, lname=S, dob=09-05-2003, gender=Female, email=thanuja@gmail.com, password=null, mobile=8956748765, course=BBA, country=US, imageName=null]
+16:13:01.432 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=4, rollno=104, fname=Rahul, lname=J, dob=06-04-2001, gender=Male, email=rahul@gmail.com, password=null, mobile=9980875674, course=BBM, country=Japan, imageName=null]
+16:13:01.433 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=5, rollno=105, fname=Sumanth, lname=T, dob=09-07-2003, gender=Male, email=sumanth@gmail.com, password=null, mobile=9878986567, course=B.Com, country=Canada, imageName=null]
+16:13:01.433 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=6, rollno=106, fname=Punith, lname=T, dob=12-09-2001, gender=Male, email=punith@gmail.com, password=m20mc1, mobile=7685453435, course=BCA, country=India, imageName=null]
+16:13:01.433 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=7, rollno=107, fname=Ram, lname=N, dob=13-08-2002, gender=Male, email=ram@gmail.com, password=m20mc2, mobile=6564342313, course=BCA, country=India, imageName=null]
+16:13:01.433 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=8, rollno=108, fname=Kiran, lname=J, dob=14-07-2003, gender=Male, email=kiran@gmail.com, password=m20mc3, mobile=7654876545, course=BCA, country=US, imageName=null]
+16:13:01.433 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=9, rollno=109, fname=Sonu, lname=M, dob=15-06-2001, gender=Female, email=sonu@gmail.com, password=m20mc4, mobile=9873357654, course=BBM, country=US, imageName=null]
+16:13:01.433 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=10, rollno=110, fname=Geetha, lname=P, dob=16-05-2002, gender=Female, email=geetha@gmail.com, password=m20mc5, mobile=7653452345, course=BBM, country=US, imageName=null]
+16:13:01.433 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=11, rollno=111, fname=Uma, lname=L, dob=17-04-2003, gender=Female, email=uma@gmail.com, password=m20mc6, mobile=6754323454, course=BBA, country=Japan, imageName=null]
+16:13:01.433 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=12, rollno=112, fname=Tom, lname=B, dob=18-03-2001, gender=Male, email=tom@gmail.com, password=m20mc7, mobile=7651234323, course=BBA, country=Japan, imageName=null]
+16:13:01.434 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=13, rollno=113, fname=Dora, lname=S, dob=19-02-2002, gender=Female, email=dora@gmail.com, password=m20mc8, mobile=8123214543, course=BBA, country=Canada, imageName=null]
+16:13:01.434 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=14, rollno=114, fname=Pavan, lname=H, dob=20-01-2003, gender=Male, email=pavan@gmail.com, password=m20mc9, mobile=7651324543, course=BBA, country=US, imageName=null]
+16:13:01.434 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - Student List::Student [id=15, rollno=115, fname=Vishnu, lname=R, dob=21-09-2001, gender=Male, email=vishnu@gmail.com, password=m20mc10, mobile=7610972454, course=B.Com, country=Canada, imageName=null]
+16:13:01.434 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------adding the captured value to model
+16:13:01.434 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------set the studentList with model object and send it to student-list view
+16:13:27.889 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------procesLogout method is called on /processLogout mapping
+16:13:27.903 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+16:13:37.195 [http-nio-8082-exec-5] INFO  com.sm.controllers.StudentController - ------------------processStudentLogin method is called on /processStudentLogin mapping
+16:13:37.195 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------------ calling findByEmailAndPassword() method of StudentDAO class
+16:13:37.195 [http-nio-8082-exec-5] DEBUG com.sm.controllers.StudentController - ------------------------ called findByEmailAndPassword() method 
+16:14:04.319 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------processStudentLogin method is called on /processStudentLogin mapping
+16:14:04.319 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - ------------------------ calling findByEmailAndPassword() method of StudentDAO class
+16:14:04.320 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - ------------------------ called findByEmailAndPassword() method 
+16:14:18.834 [http-nio-8082-exec-3] INFO  com.sm.controllers.StudentController - ------------------processStudentLogin method is called on /processStudentLogin mapping
+16:14:18.834 [http-nio-8082-exec-3] DEBUG com.sm.controllers.StudentController - ------------------------ calling findByEmailAndPassword() method of StudentDAO class
+16:14:18.834 [http-nio-8082-exec-3] DEBUG com.sm.controllers.StudentController - ------------------------ called findByEmailAndPassword() method 
+16:14:18.863 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - ------------------studentInfo method is called on /studentInfo mapping
+16:14:18.864 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - ------------------------ calling getStudentByEmail() method of StudentDAO class
+16:14:18.864 [http-nio-8082-exec-2] DEBUG com.sm.controllers.StudentController - ------------------------ called getStudentByEmail() method 
+16:14:18.864 [http-nio-8082-exec-2] INFO  com.sm.controllers.StudentController - email id of the student :sange@gmail.com
+16:14:29.428 [http-nio-8082-exec-1] INFO  com.sm.controllers.StudentController - ------------------processStudentLogout method is called on /processStudentLogout mapping
+16:14:29.645 [http-nio-8082-exec-4] INFO  com.sm.controllers.StudentController - ------------------showLogin() method is called on /showLogin mapping
+16:24:30.616 [http-nio-8082-exec-6] INFO  com.sm.controllers.StudentController - ------------------processStudentLogin method is called on /processStudentLogin mapping
+16:24:30.617 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - ------------------------ calling findByEmailAndPassword() method of StudentDAO class
+16:24:30.617 [http-nio-8082-exec-6] DEBUG com.sm.controllers.StudentController - ------------------------ called findByEmailAndPassword() method 
+16:24:30.643 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - ------------------studentInfo method is called on /studentInfo mapping
+16:24:30.645 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - ------------------------ calling getStudentByEmail() method of StudentDAO class
+16:24:30.645 [http-nio-8082-exec-10] DEBUG com.sm.controllers.StudentController - ------------------------ called getStudentByEmail() method 
+16:24:30.645 [http-nio-8082-exec-10] INFO  com.sm.controllers.StudentController - email id of the student :sange@gmail.com
